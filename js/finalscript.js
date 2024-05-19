@@ -57,7 +57,7 @@ const links = document.querySelectorAll('a'); // Selects all anchor selectors
 links.forEach(link => {
     link.addEventListener('click', (event) => {
         // Check if the link is external
-        if (link.href.startsWith('http://') || link.href.startsWith('https://')) {
+        if (link.href.startsWith('https://stephencase504.github.io/')) {
             // Open the link in a new tab
             window.open(link.href, '_blank');
             // Stop the event from propagating and prevent the default behavior
