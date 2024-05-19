@@ -1,0 +1,295 @@
+body {
+  background-color: #e8f4f8;
+  font-family: "reross-quadratic", sans-serif;
+  color: black;
+  font-size: 1.25vw; /* Assuming 24pt is approximately 32px */
+  text-align: center;
+}
+
+h1 {
+  font-size: 5vw; /* Assuming 60pt is approximately 80px */
+  white-space: nowrap;
+}
+
+h2 {
+  font-size: 3vw; /* Assuming 36pt is approximately 48px */
+}
+
+.grid-container {
+  display: grid;
+  grid-template-rows: repeat(8, auto); /* Increase the number of rows to 8 */
+  justify-content: center;
+  gap: 1em;
+}
+
+.row1,
+.row4,
+.row5,
+.row6 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 1em;
+}
+
+/* Center the content of each row */
+.grid-container > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Add spacing between each external link and CTA */
+.row8 a,
+.row2 a {
+  margin: 1em;
+  align-items: center;
+}
+
+
+.carousel {
+  width: 33vw; /* Set carousel width to full viewport width */
+  margin: 0 auto; /* Center the carousel */
+}
+
+.carousel-inner img {
+  width: 100%; /* Ensure images take full width of the carousel */
+  height: auto; /* Maintain aspect ratio */
+  object-fit: cover; /* Cover the area without stretching */
+}
+
+.carousel-caption {
+  font-size: 1vw; /* Assuming 12pt is approximately 16px */
+  background: rgba(0, 0, 0, 0.5);
+  padding: 1em; /* Adjust padding as needed */
+  position: absolute; /* Position caption over the image */
+  bottom: 0; /* Align caption at the bottom of the image */
+  left: 50%; /* Center the caption */
+  transform: translateX(-50%); /* Align center of caption with center of image */
+  width: 80%; /* Set a max-width for the caption */
+  text-align: center; /* Center the text inside the caption */
+}
+
+.carousel-indicators {
+  position: absolute; /* Position indicators at the bottom */
+  bottom: 10px; /* Adjust distance from the bottom */
+  left: 0;
+  right: 0;
+  text-align: center; /* Center the indicators */
+}
+
+.carousel-indicators button {
+  width: max-content !important;
+}
+
+.carousel-indicators img {
+  width: 3.645833333333333vw; /* Converted from 70px */
+  display: inline-block; /* Display indicators inline */
+}
+
+
+.tile {
+  position: relative;
+  width: 20.833333333333332vw; /* Converted from 400px */
+  height: 20.833333333333332vw; /* Converted from 400px */
+  background-size: cover;
+  background-position: center;
+  margin-top: 3em;
+  transition: transform 0.2s; /* Animation */
+}
+
+.tile-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  color: white; /* Change as needed */
+  padding: 1em;
+  text-align: center;
+}
+
+.tile:hover {
+  transform: scale(1.1); /* Zoom in */
+}
+
+.gradphoto {
+  height: 20vw; /* Converted from 700px */
+  width: 20vw; /* Converted from 700px */
+  margin: 0vw; /* Converted from -64px */
+  margin-right: -10em;
+  position: relative; /* This is needed to position the caption */
+  overflow: hidden; /* This will make the image round */
+}
+
+.gradphoto img {
+  width: 100%; /* This will make the image fill the div */
+  height: 100%; /* This will make the image fill the div */
+  transition: border-radius 0.5s ease-in-out; /* This will make the transformation smooth */
+}
+
+.gradphoto:hover img {
+  border-radius: 50%; /* This will make the image round */
+}
+
+.gradphoto:before {
+  content: "Click to return home"; /* This is your caption */
+  position: absolute; /* This will position the caption over the image */
+  top: 80%; /* This will position the caption at the bottom */
+  left: 50%; /* This will center the caption horizontally */
+  transform: translate(-50%, -50%); /* This will center the caption */
+  opacity: 0; /* This will initially hide the caption */
+  transition: all 0.5s ease-in-out; /* This will make the caption fade in smoothly */
+  background-color: rgba(0,0,0,0.7); /* This will make the caption background semi-transparent black */
+  color: white; /* This is the caption text color */
+  padding: 10px; /* This is the caption padding */
+  border-radius: 5px; /* This will make the caption corners round */
+}
+
+.gradphoto:hover:before {
+  opacity: 1; /* This will show the caption on hover */
+}
+
+.row1 {
+  background-color: #2459a5;
+  color: white;
+  padding: 10em 10em 0em 10em;
+  margin-top: -10em;
+  margin-left: -13.75em;
+  margin-right: -13.75em;
+}
+
+.row1 h1 {
+  margin-right: 26.041666666666668vw; /* Converted from 500px */
+}
+
+.row2 {
+  color: #d93831;
+  padding: 2em;
+  margin-left: 0em;
+  margin-right: 0em;
+  margin-top: -1em;
+}
+
+.row2 a {
+  display: inline-block;
+  border: none; /* Remove border */
+  color: white; /* Text color */
+  text-align: center; /* Center the text */
+  text-decoration: none; /* Remove underline */
+  font-size: 0.8333333333333334vw; /* Converted from 16px */
+  cursor: pointer;
+  border-radius: 50%; /* Make the button round */
+  width: 10.416666666666666vw; /* Converted from 200px */
+  height: 10.416666666666666vw; /* Converted from 200px */
+  line-height: 10.416666666666666vw; /* Vertically center the text */
+  margin-right: 5.208333333333333vw; /* Converted from 100px */
+}
+
+.row2 a.cta1 {
+  background-color: #ebbf47; /* Yellow */
+  color: #000000;
+  /* rest of your styles... */
+}
+
+.row2 a.cta2 {
+  background-color: #d93831; /* Red */
+  /* rest of your styles... */
+}
+
+.row2 a.cta3 {
+  background-color: #2459a5; /* Blue */
+  /* rest of your styles... */
+}
+
+.row2 a.cta4 {
+  background-color: #000000; /* Black */
+  margin-right: 0px;
+  /* rest of your styles... */
+}
+
+.row2 a.cta1:hover {
+  transform: scale(1.1); /* Zoom in */
+  background-color: white;
+  color: black;
+}
+
+.row2 a.cta2:hover {
+  transform: scale(1.1); /* Zoom in */
+  background-color: white;
+  color: black;
+}
+
+.row2 a.cta3:hover {
+  transform: scale(1.1); /* Zoom in */
+  background-color: white;
+  color: black;
+}
+
+.row2 a.cta4:hover {
+  transform: scale(1.1); /* Zoom in */
+  background-color: white;
+  color: black;
+}
+
+.row2 nav {
+  display: flex;
+  justify-content: center;
+}
+
+.row7 {
+  margin-top: 1em;
+}
+
+.row8 {
+  background: #2459a5;
+  color: #d93831;
+  padding: 3em;
+  margin-top: 1em;
+    margin-left: -13.75em;
+  margin-right: -13.75em;
+}
+
+#myBtn {
+  border: none; /* Remove border */
+  color: white; /* Text color */
+  text-align: center; /* Center the text */
+  text-decoration: none; /* Remove underline */
+  font-size: 0.8333333333333334vw; /* Converted from 16px */
+  cursor: pointer;
+  border-radius: 50%; /* Make the button round */
+  background-color: #555555; /* Background color */
+  width: 10.416666666666666vw; /* Converted from 200px */
+  height: 10.416666666666666vw; /* Converted from 200px */
+  line-height: 2.6041666666666665vw; /* Converted from 50px */
+}
+
+#myBtn:hover {
+  transform: scale(1.1); /* Zoom in */
+  background-color: white;
+  color: black;
+}
+
+.row8 a {
+  text-decoration: none;
+  color: white;
+}
+
+.row8 .bi {
+  font-size: 4em;
+}
+
+/* CSS rules for smartphones */
+@media (max-width: 600px) {
+  .row1 {
+    width: 152.4%; /* Adjust as needed */
+    height: auto;
+  }
+}
+
+/* CSS rules for desktop screens */
+@media (min-width: 601px) {
+  .row1 {
+    width: 152.4%; /* Adjust as needed */
+    height: auto;
+  }
+}
