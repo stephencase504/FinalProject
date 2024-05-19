@@ -57,12 +57,22 @@ const links = document.querySelectorAll('a'); // Selects all anchor selectors
 links.forEach(link => {
     link.addEventListener('click', (event) => {
         // Check if the link is external
-        if (link.href.startsWith('https://stephencase504.github.io/')) {
-            // Open the link in a new tab
-            window.open(link.href, '_blank');
-            // Stop the event from propagating and prevent the default behavior
-            event.stopPropagation();
-            event.preventDefault();
+        if (link.href.startsWith('http://') || link.href.startsWith('https://'))  {
+            // Check if the link is part of the project
+            if (link.href.startsWith('https://stephencase504.github.io/FinalProject/')) {
+                // Prevent default link behavior
+                event.preventDefault();
+                fadeOutPage(); // Fade out the current page
+                setTimeout(() => {
+                    window.location.href = link.href; // Navigate to the new page
+                }, 500); // Adjust the delay to match your transition duration
+            } else {
+                // Open the link in a new tab
+                window.open(link.href, '_blank');
+                // Stop the event from propagating and prevent the default behavior
+                event.stopPropagation();
+                event.preventDefault();
+            }
         } else {
             // Prevent default link behavior
             event.preventDefault();
@@ -73,6 +83,7 @@ links.forEach(link => {
         }
     });
 });
+
 
 
 // When the new page loads, call fadeInPage()
